@@ -108,7 +108,7 @@ def get_current_fronter(token):
 
 
 def set_current_fronter(token, fronter):
-    _post = {"webhook": {"command": "switch","member_name": fronter}}
+    _post = {"webhook": {"command": "switch", "member_name": fronter}}
     results = scrapeSiteWithPost(token, _post, retry=0)
     if results == "422":
         logging.warning("Fronter was already set.")
